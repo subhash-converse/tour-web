@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "src/Adminpannel components/Sidenavbar.tsx"  ]
 }
