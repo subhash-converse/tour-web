@@ -7,7 +7,7 @@ import "../App"
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import Allcandidate from './Create-job-vacancy';
+import Allcandidate from './Candidate-list';
 import Vacancylist from './Vacancy-list';
 import Addjovvacancy from './Add-candidate';
 
@@ -67,15 +67,14 @@ const Sidenavbar = () => {
       </div>
 
         {/* sidebar,contents */}
-        <div className='flex '>
+        <div className='flex  '>
 
-         <div></div> 
-
+         
           {(navVisible ? 
-          <div className=' pl-[20px] pr-[5px] fixed  bg-white flex flex-col h-[100vh] border-r-[1px] border-gray-200 lg:relative lg:inline-block min-w-[242px] lg:min-w-[265px] '>
+          <div className=' pl-[20px] pr-[5px] fixed  bg-white flex flex-col h-[92vh] border-r-[1px] border-gray-200 lg:relative lg:inline-block min-w-[242px] lg:min-w-[265px] '>
             {/* user management */}
-            <div className=''>
-              <button className='flex items-centerp py-[10px] w-full  nav-button' style={{ color: listButtonColor }} onClick={toggleListVisibility}> 
+            <div className='mt-4'>
+              <button className='flex items-centerp  py-[10px] w-full  nav-button' style={{ color: listButtonColor }} onClick={toggleListVisibility}> 
                 <span className='flex gap-3 items-center w-full'>
                 <span className='min-w-[25px] text-center'><PersonOutlineIcon/></span>
                   <div className='w-full flex justify-between'> 
@@ -110,7 +109,7 @@ const Sidenavbar = () => {
                   </ul>)}
             </div>
           </div> :
-          <div className=' px-[20px] hidden fixed] bg-white  h-[100vh] border-r-[1px] border-gray-200 md:relative md:inline-block  min-w-[72px] '>
+          <div className=' px-[20px] hidden fixed] bg-white  h-[92vh] border-r-[1px] border-gray-200 md:relative md:inline-block  min-w-[72px] '>
           {/* user management */}
           <div className=''>
             <button className='flex items-centerp py-[10px] w-full  nav-button' style={{ color: listButtonColor }} onClick={toggleListVisibility}> 
@@ -131,13 +130,13 @@ const Sidenavbar = () => {
            )}
 
           {/* table or form content */}
-          <div className='shadow-inner flex flex-col justify-between shadow-gray-200 overflow-scroll w-full px-[10px] md:px-[30px] '>
-          {/* <Allcandidate/> */}
+          <div className='shadow-inner flex flex-col  shadow-gray-200 overflow-scroll w-full px-[10px] md:px-[30px] md:justify-between '>
+          <Allcandidate/>
           {/* <Vacancylist/> */}
-          <Addjovvacancy/>
+          {/* <Addjovvacancy/> */}
           
           {/* copy right */}
-          <div className='w-full flex flex-col text-[#029e9d] text-sm items-center border-t-[1px] border-gray-200 md:flex-row md:justify-between'>
+          <div className=' w-full flex flex-col text-[#029e9d] text-sm items-center border-t-[1px] border-gray-200 md:flex-row md: justify-between'>
             <span>Copyright <span>&copy;</span>2022 Travalin</span>
             <span>Powered By <span><FontAwesomeIcon icon={faHeart} /></span> Bizberg Themes</span>
           </div>

@@ -39,7 +39,7 @@ const Candidatelist = () => {
     <TableContainer >
       <Table className='table'>
         
-          <tr>
+          <tr className=''>
             <th className=''>Dessert id</th>
             <th >image</th>
             <th >name</th>

@@ -43,7 +43,7 @@ const Vacancylist = () => {
       </div>
 
       {/* candidate table */}
-      <div className='my-[50px] shadows max-h-[375px] overflow-scroll lg:my-[100px]'>
+      <div className='my-[50px] shadows max-h-[375px] overflow-scroll lg:my-[60px]'>
         <Vacancytable/>
       </div>
         

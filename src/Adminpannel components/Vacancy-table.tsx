@@ -34,10 +34,10 @@ function createData(
 
 const Vacancytable = () => {
   return (
-    <TableContainer >
+    <TableContainer className='h-scree' >
       <Table className='table'>
         
-          <tr>
+          <tr className='sticky top-0'>
             <th className=''> Id</th>
             <th >Openings</th>
             <th >Department</th>

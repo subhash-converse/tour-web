@@ -54,3 +54,30 @@
         padding: 12px 15px;
     }
 }
+
+.add-candidate{
+    outline: none;
+    border: 1px solid rgb(229,231,235);
+    border-radius: 6px;
+}
+.dialog-button{
+    /* backgroun-[#029e9d] text-white px-4 py-3 rounded-xl flex gap-2 */
+    background-color:#029e9d !important;
+    color: white !important;
+    padding: 12px 16px !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    gap: 8px !important;
+}
+.dialoge-button {
+    outline: none;
+    border: 1px solid rgb(229,231,235);
+    border-radius: 6px;
+    display: flex;
+    
+    flex-direction: column;
+    margin-top: 10px;
+    padding-left: 10px;
+    width: 400px;
+
+}
