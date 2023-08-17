@@ -3,11 +3,13 @@ import  logo from '../images/travalin logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faBell, faBriefcase, faHeart, faMagnifyingGlass, faMinus, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { Avatar } from '@mui/material';
-import "../App"
+import "../App.css"
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import Allcandidate from './Candidate-list';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import img from '../images/1.jpg'
 import Vacancylist from './Vacancy-list';
 import Addjovvacancy from './Add-candidate';
 
@@ -35,18 +37,23 @@ const Sidenavbar = () => {
     console.log(navVisible)
   }
 
+  const Blink=()=>{
+    return<div className='notification-circle'>
+      </div>
+  }
+
   return (
        <div className='h-screen '>
         {/* logo,search */}
-        <div className='w-full sticky top-0 flex border-b-[1px] border-gray-200 h-[65px]'>
+        <div className='w-full sticky top-0 flex border-b-[1px] border-gray-200 h-[65px] '>
 
-          {(navVisible ? <div className='  bg-white z-10 border-r-[1px] border-gray-200 flex items-center   min-w-[242px] lg:min-w-[265px] px-[20px] justify-between'>
-                         <img src={logo} alt="logo" className=' h-[30px] w-[160px]  lg:inline-block lg:justify-self-start'/>
-                         <FontAwesomeIcon icon={faXmark} className='text-[#029e9d]'onClick={navication}/>
+          {(navVisible ? <div className='  bg-white z-10 border-r-[1px] border-gray-200 flex items-center   min-w-[242px] lg:min-w-[265px] px-[20px] justify-between menu-bar'>
+                         <img src={logo} alt="logo" className=' h-[30px] max-w-[160px]  lg:inline-block lg:justify-self-start logo-trans'/>
+                         <FontAwesomeIcon icon={faXmark} className='text-[#029e9d] 'onClick={navication}/>
                          </div>
                           :
-                          <div className='min-w-[72px] text-center z-[1] border-r-[1px] bg-white border-gray-200 p-5'>
-                          <FontAwesomeIcon icon={faBars} className='text-[#029e9d]'onClick={navication} />
+                          <div className='min-w-[72px] text-center z-[1] border-r-[1px] bg-white border-gray-200 p-5 menu-bar'>
+                          <FontAwesomeIcon icon={faBars} className='text-[#029e9d] self-center'onClick={navication}  />
                          </div>
                           )}
 
@@ -60,8 +67,8 @@ const Sidenavbar = () => {
                 </div>
 
                 <div className='flex items-center gap-2  md:gap-5 '>
-                    <FontAwesomeIcon icon={faBell}  />
-                    <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg"/>
+                    <NotificationsNoneIcon /> <Blink/>
+                    <Avatar alt="Remy Sharp" src={img} style={{height:"30px", width:"30px"}}/>
                  </div>
            </div>
       </div>
@@ -71,7 +78,7 @@ const Sidenavbar = () => {
 
          
           {(navVisible ? 
-          <div className=' pl-[20px] pr-[5px] fixed  bg-white flex flex-col h-[92vh] border-r-[1px] border-gray-200 lg:relative lg:inline-block min-w-[242px] lg:min-w-[265px] '>
+          <div className=' pl-[20px] pr-[5px] fixed menu-bar bg-white flex flex-col h-[92vh] border-r-[1px] border-gray-200 lg:relative lg:inline-block min-w-[242px] lg:min-w-[265px] '>
             {/* user management */}
             <div className='mt-4'>
               <button className='flex items-centerp  py-[10px] w-full  nav-button' style={{ color: listButtonColor }} onClick={toggleListVisibility}> 
@@ -85,7 +92,7 @@ const Sidenavbar = () => {
               </button>
 
                {isListVisible && (
-                  <ul className='nav-ul'>
+                  <ul className='list-type'>
                     <li className='nav-list'>All User Lists</li>  
                     <li className='nav-list'>Add User</li>
                   </ul>)}
@@ -102,16 +109,16 @@ const Sidenavbar = () => {
             </span>
             </button>               
                {isCareerVisible && (
-                  <ul className='nav-ul'>
+                  <ul className='list-type'>
                       <li className='nav-list' >All Job vacancies</li>
                       <li className='nav-list'>Add Job Vacancy</li>
                       <li className='nav-list'>All Candidate List</li>
                   </ul>)}
             </div>
           </div> :
-          <div className=' px-[20px] hidden fixed] bg-white  h-[92vh] border-r-[1px] border-gray-200 md:relative md:inline-block  min-w-[72px] '>
+          <div className=' px-[20px] menu-bar hidden fixed] bg-white  h-[92vh] border-r-[1px] border-gray-200 md:relative md:inline-block  min-w-[72px] '>
           {/* user management */}
-          <div className=''>
+          <div className='mt-4'>
             <button className='flex items-centerp py-[10px] w-full  nav-button' style={{ color: listButtonColor }} onClick={toggleListVisibility}> 
               <span className='flex gap-3 items-center w-full'>
               <span className='min-w-[25px] text-center'><PersonOutlineIcon/></span>
@@ -136,7 +143,7 @@ const Sidenavbar = () => {
           {/* <Addjovvacancy/> */}
           
           {/* copy right */}
-          <div className=' w-full flex flex-col text-[#029e9d] text-sm items-center border-t-[1px] border-gray-200 md:flex-row md: justify-between'>
+          <div className=' w-full flex p-5 flex-col text-[#029e9d] text-sm items-center border-t-[1px] border-gray-200 md:flex-row md: justify-between'>
             <span>Copyright <span>&copy;</span>2022 Travalin</span>
             <span>Powered By <span><FontAwesomeIcon icon={faHeart} /></span> Bizberg Themes</span>
           </div>

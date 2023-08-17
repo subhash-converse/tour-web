@@ -11,6 +11,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import { TransitionProps } from '@mui/material/transitions';
 
+
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
     children: React.ReactElement<any, any>;
@@ -27,6 +28,7 @@ const Createjobvacancy = () => {
 
   const handleClickOpen = () => {
     setOpen(true);
+    
   };
 
   const handleClose = () => {
@@ -43,36 +45,35 @@ const Createjobvacancy = () => {
         </div>
         <div className='mt-7 md:mt-0'>
         <div>
-      <Button className='dialog-button' onClick={handleClickOpen}>
-      <FontAwesomeIcon icon={faPlus}/>Create A Candidate 
-      </Button>
-      <Dialog
+        <button className='dialog-button' onClick={handleClickOpen}><FontAwesomeIcon icon={faPlus}/> Create A Candidate</button>
+      
+      <Dialog 
         open={open}
         TransitionComponent={Transition}
         keepMounted
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
+        className='rounded-2xl'
       >
         <DialogTitle>{"Create A Candidate"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
-            <div className='w-[700px]'>
-            <input type="text" placeholder='id' className='dialoge-button' />
-            <input type="text" placeholder='Name' className='dialoge-button' />
-            <input type="text" placeholder='Email' className='dialoge-button'/>
-            <input type="number" placeholder='Phone' className='dialoge-button'/>
-            <input type="date" placeholder='DOB' className='dialoge-button flex'/>
-            <input type="text" placeholder='Gender' className='dialoge-button'/>
-            <input type="text" placeholder='Department' className='dialoge-button'/>
-            <input type="file" placeholder='photo' className='dialoge-button'/>
+            <div className='w-full min-w-[150px] md:px-8'>
+            <input type="text" placeholder='id' className='dialoge-input' />
+            <input type="text" placeholder='Name' className='dialoge-input' />
+            <input type="text" placeholder='Email' className='dialoge-input'/>
+            <input type="number" placeholder='Phone' className='dialoge-input'/>
+            <input type="date" placeholder='DOB' className='dialoge-input flex'/>
+            <input type="text" placeholder='Gender' className='dialoge-input'/>
+            <input type="text" placeholder='Department' className='dialoge-input'/>
+            <input type="file" placeholder='photo' className='dialoge-input text-sm'/>
             </div>
            
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Disagree</Button>
-          <Button onClick={handleClose}>Agree</Button>   
-        </DialogActions>
+        <Button className='dialog-button' onClick={handleClickOpen}>
+      Submit</Button>        </DialogActions>
       </Dialog>
     </div>
         </div>
@@ -80,9 +81,9 @@ const Createjobvacancy = () => {
 
       {/* input fields */}
 
-      <div className='shadows px-[20px] py-[25px] mt-5 xl:flex lg:items-center lg:justify-between '>
+      <div className='shadows px-[20px] py-[25px] mt-5 xl:flex lg:items-center lg:justify-between bg-white'>
         <div>
-          <span className='flex justify-center font-medium'>Main Catagory Lists</span>
+          <span className='flex justify-center font-medium'>Candidate List</span>
         </div>
 
         <div className='flex flex-col  gap-y-7 mt-3 md:flex-row justify-between lg:mt-0 xl:w-[75%]'>
@@ -103,7 +104,7 @@ const Createjobvacancy = () => {
       </div>
 
       {/* candidate table */}
-      <div className='my-[50px] shadows max-h-[375px] overflow-scroll lg:my-[60px]'>
+      <div className='my-[50px] shadows max-h-[500px] overflow-scroll lg:my-[60px]'>
         <Candidatelist/>
       </div>
         

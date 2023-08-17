@@ -1,12 +1,11 @@
 import { faDeleteLeft, faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Table from '@mui/material/Table';
-import TableContainer from '@mui/material/TableContainer';
+import img from '../images/1.jpg';
 
   
   function createData(
     id: number,
-    img: string,
+    img: string|any|File,
     name: string,
     email: any,
     phone:number,
@@ -18,28 +17,29 @@ import TableContainer from '@mui/material/TableContainer';
   }
   
   const rows = [
-    createData(1,"img1","subhash","dddd@gmail.com",1234567890,"13/12/23","male","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
+    createData(1,`${img}`,"subhash","dddd@gmail.com",1234567890,"13/12/23","male","csc"),
+    createData(2,`${img}`,"monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
+    createData(2,`${img}`,"monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
+    createData(2,`${img}`,"monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
+    createData(2,`${img}`,"monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
+    createData(2,`${img}`,"monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
+    createData(2,`${img}`,"monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
+    createData(2,`${img}`,"monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
+    createData(2,`${img}`,"monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
+    createData(2,`${img}`,"monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
+    createData(2,`${img}`,"monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
+    createData(2,"img 1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
   ];
 
 
 const Candidatelist = () => {
   return (
+
+    <div>
     
-    <TableContainer >
-      <Table className='table'>
+      <table className='w-full'>
         
-          <tr className=''>
+          <tr className='sticky top-0 bg-white '>
             <th className=''>Dessert id</th>
             <th >image</th>
             <th >name</th>
@@ -53,9 +53,9 @@ const Candidatelist = () => {
         
         
           {rows.map((row) => (
-            <tr>
+            <tr className=''>
               <td >{row.id}</td>
-              <td >{row.img}</td>
+              <td ><img className='rounded-md h-[60px] w-[50px]' src={row.img} alt="user img" /></td>
               <td >{row.name}</td>
               <td >{row.email}</td>
               <td >{row.phone}</td>
@@ -66,8 +66,9 @@ const Candidatelist = () => {
             </tr>
           ))}
         
-      </Table>
-    </TableContainer>
+      </table>
+    
+    </div>
   )
 }
 

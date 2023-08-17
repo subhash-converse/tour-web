@@ -1,3 +1,6 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
 .nav-list{
     height: 40px;
     display: flex;
@@ -12,25 +15,33 @@
 .nav-ul{
     border-bottom: 0.5px solid rgb(228, 225, 225);
 }
-.nav-ul li{
+.list-type {
    list-style-type: disc;
 }
 .shadows{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius:10px ;
 }
-.table tr{
-    border:  1px solid rgb(228, 225, 225); ;
+table tr{
+    border:  1px solid rgb(228, 225, 225); 
+    background-color: white;
+    
 }
-.table td{
+table>tr>td{
     padding: 8px 25px;
     text-align: center;
+    
 }
-.table th{
+table th{
     font-weight: 500;
     padding: 20px 25px;
     text-align: center;
+    background-color: white;
+   
 
+}
+tr:nth-child(even){
+    background-color: #fbfbfb !important;
 }
 
 @media only screen and (min-width: 375px) {
@@ -51,7 +62,7 @@
 }
 @media only screen and (min-width: 1440px) {
     .table td,th{
-        padding: 12px 15px;
+        padding: 20px 15px;
     }
 }
 
@@ -67,17 +78,75 @@
     padding: 12px 16px !important;
     border-radius: 12px !important;
     display: flex !important;
+    align-items: center;
     gap: 8px !important;
 }
-.dialoge-button {
+
+.dialog-button:hover{
+    background-color: rgb(187,188,44) !important;
+    transition-duration: 500ms;
+}
+
+.dialoge-input {
     outline: none;
     border: 1px solid rgb(229,231,235);
     border-radius: 6px;
     display: flex;
-    
     flex-direction: column;
     margin-top: 10px;
     padding-left: 10px;
-    width: 400px;
+    width: 100%;
 
 }
+
+.navbar-ul{
+    list-style-type: circle;
+}
+
+.menu-bar{
+    transition-duration: 1s;
+}
+
+.logo-trans{    
+    transition-delay:5s ;
+}
+   
+
+.notification-circle{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(43, 192, 147);
+    border-radius:50%;
+    position: absolute;
+    top:  18px;
+    margin-left:11px;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgb(43, 192, 147,1);
+    animation: pulse-green 1s infinite;
+    
+    
+  }
+  
+  @keyframes pulse-green {
+    0% {
+      transform: scale(0.7);
+      box-shadow: 0 0 0 0 rgb(43, 192, 147,0.25);
+    }
+  
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgb(43, 192, 147,0.25);
+    }
+  
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+    }
+  }
+  
+  @media screen and (min-width:1441px)and (max-width:2560px){
+    .notification-circle{
+      top:20px;
+      margin-left: 10px;
+    }
+  }
