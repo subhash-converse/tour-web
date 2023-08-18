@@ -1,8 +1,8 @@
 import React from 'react'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Candidatelist from './Candidate-table'
-import Vacancytable from './Vacancy-table'
+import Candidatelist from '../candidate/candidateTable'
+import Vacancytable from './vacancyTable'
 
 const Vacancylist = () => {
   return (

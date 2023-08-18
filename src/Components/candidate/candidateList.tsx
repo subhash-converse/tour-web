@@ -1,6 +1,6 @@
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Candidatelist from './Candidate-table'
+import Candidatelist from './candidateTable'
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
@@ -104,7 +104,7 @@ const Createjobvacancy = () => {
       </div>
 
       {/* candidate table */}
-      <div className='my-[50px] shadows max-h-[500px] overflow-scroll lg:my-[60px]'>
+      <div className='my-[50px] shadows max-h-[462px] overflow-scroll lg:my-[60px]'>
         <Candidatelist/>
       </div>
         

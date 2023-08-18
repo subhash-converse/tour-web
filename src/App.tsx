@@ -1,5 +1,6 @@
 import './App.css';
-import Sidenavbar from './Adminpannel components/Sidenavbar';
+import Sidenavbar from './Components/sideNavbar';
+
 
 
 function App() {
