@@ -39,13 +39,17 @@ const Createjobvacancy = () => {
     <div className=''>
       {/* title,add candidate button */}
 
-      <div className='w-full pt-8 flex flex-col items-center md:flex-row md:justify-between'>
-        <div className='text-[#029e9d] text-md'>
-          <span>Dashboard</span>/<span className='text-[rgb(35,35,35)]'>Create A Candidate</span>
+      <div className='w-full flex flex-col mb-[15px] items-center md:flex-row md:justify-between'>
+        <div className='text-[#029e9d] text-sm'>
+          <a href='#' className='anchor-tag'>Dashboard</a> / <span className='text-[#7987a1]'> Candidate List</span>
         </div>
-        <div className='mt-7 md:mt-0'>
+
+        <div className=''>
+        <button className='Export-button' onClick={handleClickOpen}>Export</button>
+        </div>
+        {/* <div className='mt-7 md:mt-0'>
         <div>
-        <button className='dialog-button' onClick={handleClickOpen}><FontAwesomeIcon icon={faPlus}/> Create A Candidate</button>
+        <button className='dialog-button' onClick={handleClickOpen}><FontAwesomeIcon icon={faPlus}/>Candidate list</button>
       
       <Dialog 
         open={open}
@@ -76,36 +80,47 @@ const Createjobvacancy = () => {
       Submit</Button>        </DialogActions>
       </Dialog>
     </div>
-        </div>
+        </div> */}
       </div>
 
       {/* input fields */}
 
-      <div className='shadows px-[20px] py-[25px] mt-5 xl:flex lg:items-center lg:justify-between bg-white'>
-        <div>
-          <span className='flex justify-center font-medium'>Candidate List</span>
+      <div className='shadows  p-[24px] mb-4  xl:flex lg:items-center lg:justify-between bg-white'>
+        <div className=' px -[12px]'>
+          <span className='flex justify-center font-bold'>Candidate List</span>
         </div>
 
-        <div className='flex flex-col  gap-y-7 mt-3 md:flex-row justify-between lg:mt-0 xl:w-[75%]'>
-        <input type="text" placeholder='Search by catogory title' className='border-[1px] w-[full] border-gray-200  rounded-lg outline-none px-[10px] h-12 md:w-[210px]  xl:w-[350px]'/>
-        <select name="catogory" id="catogory" className='border-[1px] w-full  border-gray-200 rounded-lg outline-none px-[10px] h-12 md:w-[210px]'>
-          <option value="catogory" className='text-[#029e9d]'>catogory</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
+        <div className='flex flex-col  gap-y-7 mt-3 md:flex-row gap-x-6 lg:mt-0 xl:w-[75%]'>
+        <input type="text" placeholder='Search by catogory title' className='border-[1px] w-[full] border-gray-200  rounded-lg outline-none px-[10px] h-12 md:w-[210px]  xl:w-[50%]'/>
+        <select name="catogory" id="catogory" className='border-[1px] w-full  border-gray-200 rounded-lg outline-none px-[10px] h-12 md:w-[25%] text-[#7987AD]'>
+          <option value="catogory">catogory</option>
+          <option value="1" className='drop-option'>1</option>
+          <option value="2" className='drop-option'>2</option>
+          <option value="3" className='drop-option'>3</option>
         </select>
-        <select name="entries" id="enrties" className='border-[1px] border-gray-200 w-full rounded-lg outline-none px-[10px] h-12 md:w-[210px]'>
+        <select name="entries" id="enrties" className='border-[1px] border-gray-200 w-full rounded-lg outline-none px-[10px] h-12 md:w-[25%] text-[#7987AD]'>
           <option value="Show Entries">Show Entries</option>
-          <option value="10">10</option>
-          <option value="20">20</option>
-          <option value="30">30</option>
+          <option value="10" className='drop-option'>10</option>
+          <option value="20" className='drop-option'>20</option>
+          <option value="30" className='drop-option'>30</option>
         </select>
         </div>
       </div>
 
       {/* candidate table */}
-      <div className='my-[50px] shadows max-h-[462px] overflow-scroll lg:my-[60px]'>
+      <div className=' shadows max-h-[496px] overflow-scroll p-[24px] bg-white mb-[15px]'>
         <Candidatelist/>
+      </div>
+
+      {/* pagenation */}
+      <div className='w-full'>
+        <div  className='flex gap-2 justify-center lg:justify-start'>
+        <button className='Navication-button' onClick={handleClickOpen}>Previos</button>
+        <button className='Navication-button' onClick={handleClickOpen}>1</button>
+        <button className='Navication-button' onClick={handleClickOpen}>2</button>
+        <button className='Navication-button' onClick={handleClickOpen}>3</button>
+        <button className='Navication-button' onClick={handleClickOpen}>Next</button>
+        </div>
       </div>
         
     </div>

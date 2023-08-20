@@ -47,13 +47,13 @@ const Sidenavbar = () => {
         {/* logo,search */}
         <div className='w-full sticky top-0 flex border-b-[1px] border-gray-200 h-[60px] '>
 
-          {(navVisible ? <div className='menu-bar  bg-white z-10 border-r-[1px] border-gray-200 pt-1 flex items-center   min-w-[240px] px-[25px] '>
+          {(navVisible ? <div className='menu-bar  bg-white z-10 border-r-[1px] border-gray-200 pt-1 flex items-center min-w-[240px] px-[25px] '>
                          <a href="" className='w-full'><img src={logo}  alt="logo" className='  h-[29px] w-[131px] lg:inline-block lg:justify-self-start logo-trans'/></a>
                          <FontAwesomeIcon icon={faXmark} className='text-[rgb(121,135,161)] text-xl'  onClick={navication}/>
                          </div>
                           :
-                          <div className='menu-bar min-w-[70px] text-center z-[1] border-r-[1px] bg-white border-gray-200 p-5 '>
-                          <FontAwesomeIcon icon={faBars} className='text-[rgb(121,135,161)] self-center'onClick={navication}  />
+                          <div className='menu-bar min-w-[70px] z-[1] border-r-[1px] bg-white border-gray-200 p-5 flex items-center justify-center'>
+                          <FontAwesomeIcon icon={faBars} className='text-[rgb(121,135,161)] flex justify-self-center'onClick={navication}  />
                          </div>
                           )}
 
@@ -83,13 +83,13 @@ const Sidenavbar = () => {
 
          
           {(navVisible ? 
-          <div className='menu-bar px-[25px] fixed  bg-white flex flex-col h-[92vh] border-r-[1px] border-gray-200 lg:relative lg:inline-block min-w-[240px]  '>
+          <div className='menu-bar  fixed pt-[25px] pb-[50px] bg-white flex flex-col h-[92vh] border-r-[1px] border-gray-200 lg:relative lg:inline-block min-w-[240px]  '>
             {/* user management */}
-            <div className=''>
-              <button className='flex items-centerp  py-[10px] w-full  nav-button' style={{ color: listButtonColor }} onClick={toggleListVisibility}> 
-                <span className='flex items-center w-full'>
-                <span><FontAwesomeIcon icon={faUser} className='navbar-icon'/></span>
-                  <div className='w-full flex justify-between'> 
+            <div className='px-[25px]'>
+              <button className='flex items-center  py-[10px] w-full  nav-button'  onClick={toggleListVisibility}> 
+                <span className='flex items-center w-full '>
+                <span className=' text-start'><FontAwesomeIcon icon={faUser} className='navbar-icon'/></span>
+                  <div className='w-full flex justify-between pl-2'> 
                    <span className='navbar-list'>User Management</span> 
                    <span className='text-[#6A6B6B]'>{isListVisible ? <ExpandLessIcon /> : <ExpandMoreIcon />}</span>
                   </div>
@@ -103,11 +103,11 @@ const Sidenavbar = () => {
                   </ul>)}
             </div>
             {/* candidate */}
-            <div className=''>
-            <button className='nav-button flex items-center py-[10px] justify-betweenc w-full nav-button' onClick={toggleCareerVisibility} style={{ color: careerButtonColor }}>
+            <div className=' px-[25px]'>
+            <button className='nav-button flex items-center py-[10px] justify-betweenc w-full nav-button' onClick={toggleCareerVisibility} >
             <span className='flex  items-center w-full'>
-              <span ><FontAwesomeIcon icon={faBriefcase} className='navbar-icon' /></span>
-              <div className='w-full flex justify-between'>
+              <span className='text-start'><FontAwesomeIcon icon={faBriefcase} className='navbar-icon' /></span>
+              <div className='w-full flex justify-between pl-2 '>
                 <span className='navbar-list'>Career Management</span>  
                 <span className='text-[#6A6B6B]'>{isCareerVisible ? <ExpandLessIcon /> : <ExpandMoreIcon />}</span>
               </div>
@@ -121,29 +121,29 @@ const Sidenavbar = () => {
                   </ul>)}
             </div>
           </div> :
-          <div className='menu-bar px-[25px]  hidden fixed] bg-white  h-[92vh] border-r-[1px] border-gray-200 md:relative md:inline-block  w-[70px] '>
+          <div className='menu-bar pt-[25px] pb-[50px]  hidden fixed bg-white  h-[92vh] border-r-[1px] border-gray-200 md:relative md:inline-block  w-[70px] '>
           {/* user management */}
-          <div className='mt-4'>
-            <button className='flex items-centerp py-[10px] w-full  nav-button' style={{ color: listButtonColor }} onClick={toggleListVisibility}> 
-              <span className='flex gap-3 items-center w-full'>
-              <span className='min-w-[25px] text-center'><PersonOutlineIcon/></span>
-              </span>
+          <div className=''>
+            <button className='flex  px-[25px] items-center  w-full  nav-button' style={{ color: listButtonColor }} onClick={toggleListVisibility}> 
+              
+              <span className='w-full'><FontAwesomeIcon icon={faUser} className='navbar-icon'/></span>
+              
             </button>
           </div>
           {/* candidate */}
           <div className=''>
-          <button className='nav-button flex items-center py-[10px] justify-between w-full nav-button' onClick={toggleCareerVisibility} style={{ color: careerButtonColor }}>
-          <span className='flex gap-3 items-center w-full'>
-            <span className='min-w-[25px] text-center '><FontAwesomeIcon icon={faBriefcase} /></span>
-          </span>
+          <button className='nav-button  px-[25px] flex items-center  justify-between w-full nav-button' onClick={toggleCareerVisibility} >
+          
+            <span className='navbar-icon'><FontAwesomeIcon icon={faBriefcase} /></span>
+          
           </button>               
           </div>
         </div> 
            )}
 
           {/* table or form content */}
-          <div className='shadow-inner flex flex-col  shadow-gray-200 overflow-scroll w-full  md:justify-between '>
-          <div className='px-[10px] md:px-[30px]'>
+          <div className='shadow-inner flex flex-col  shadow-gray-200 overflow-scroll w-full lg:h-[93vh]  md:justify-between '>
+          <div className='p-[25px]'>
           <Allcandidate/>
           {/* <Vacancylist/> */}
           {/* <Addjovvacancy/> */}

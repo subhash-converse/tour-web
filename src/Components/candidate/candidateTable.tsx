@@ -28,7 +28,7 @@ import img from '../images/1.jpg';
     createData(2,`${img}`,"monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
     createData(2,`${img}`,"monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
     createData(2,`${img}`,"monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img 1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
+    createData(2,`${img}`,"monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
   ];
 
 
@@ -39,7 +39,7 @@ const Candidatelist = () => {
     
       <table className='w-full'>
         
-          <tr className='sticky top-0 bg-white '>
+          <tr className='fi bg-white '>
             <th className=''>Dessert id</th>
             <th >image</th>
             <th >name</th>
@@ -55,14 +55,14 @@ const Candidatelist = () => {
           {rows.map((row) => (
             <tr className=''>
               <td >{row.id}</td>
-              <td ><img className='rounded-md h-[60px] w-[50px]' src={row.img} alt="user img" /></td>
+              <td ><img className='rounded-md h-[39px] w-[35px]' src={row.img} alt="user img" /></td>
               <td >{row.name}</td>
               <td >{row.email}</td>
               <td >{row.phone}</td>
               <td  className=''>{row.dob}</td>
               <td >{row.gender}</td>
               <td >{row.openings}</td>
-              <td ><span className='flex gap-2 text-[#029e9d] justify-center'><FontAwesomeIcon icon={faPenToSquare}/><FontAwesomeIcon icon={faDeleteLeft} /></span></td>
+              <td ><span className='flex gap-2 text-[#029e9d] justify-start'><FontAwesomeIcon icon={faPenToSquare}/><FontAwesomeIcon icon={faDeleteLeft} /></span></td>
             </tr>
           ))}
         

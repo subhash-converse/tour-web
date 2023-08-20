@@ -1,5 +1,6 @@
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:"Roboto", Helvetica, sans-serif;
+    font-size: 14px;
 }
 .nav-list{
     height: 28px;
@@ -9,37 +10,53 @@ body{
 
 }
 
+.nav-list:hover{
+    padding-left: 3px;
+    transition-duration: 400ms;
+    color: #11A4A3;
+}
+
 .nav-button{
 
-    border-bottom: 0.5px solid rgb(228, 225, 225);
+    border-bottom: 0.5px dashed rgb(228, 225, 225);
     height: 42px;
+}
+
+.nav-button:hover{
+    color: #11A4A3;
+}
+
+.button-div{
+    padding-left: 8px;
 }
 
 .nav-ul{
     border-bottom: 0.5px solid rgb(228, 225, 225);
 }
-.list-type {
-   list-style-type: disc;
+.list-type{
+   padding: 0px 0px 15px 33px;
+   list-style-type: disc !important;
 }
 .shadows{
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    border-radius:10px ;
+    box-shadow: 0 0 10px 0 rgb(183 192 206/20%);
+        border-radius:10px ;
 }
 table tr{
-    border:  1px solid rgb(228, 225, 225); 
+    border-bottom:  1px solid rgb(228, 225, 225); 
     background-color: white;
     
 }
 table>tr>td{
     padding: 8px 25px;
-    text-align: center;
+    text-align: left;
     
 }
 table th{
     font-weight: 500;
     padding: 20px 25px;
-    text-align: center;
+    text-align: left;
     background-color: white;
+    font-weight:600;
    
 
 }
@@ -74,19 +91,24 @@ tr:nth-child(even){
     border: 1px solid rgb(229,231,235);
     border-radius: 6px;
 }
-.dialog-button{
+.Export-button{
     /* backgroun-[#029e9d] text-white px-4 py-3 rounded-xl flex gap-2 */
     background-color:#029e9d !important;
     color: white !important;
-    padding: 12px 16px !important;
+    padding: 12px 18px !important;
     border-radius: 12px !important;
     display: flex !important;
     align-items: center;
-    gap: 8px !important;
+    
+}
+.Export-button:hover{
+    background-color: #fdc703 !important;
+    transition-duration: 500ms;
+
 }
 
 .dialog-button:hover{
-    background-color: rgb(187,188,44) !important;
+    background-color: #fdc703 !important;
     transition-duration: 500ms;
 }
 
@@ -107,13 +129,9 @@ tr:nth-child(even){
 }
 
 .menu-bar{
-    transition-duration: 1s;
+    transition-duration: 100ms;
 }
-
-.logo-trans{    
-    transition-delay:5s ;
-}
-   
+ 
 
 .notification-circle{
     width: 10px;
@@ -157,13 +175,29 @@ tr:nth-child(even){
     font-size: 14px;
     display: flex;
     align-items: center;
-    margin-left: 5px;
     font-weight: 600;
     color: rgb(113,113,113);
   }
   .navbar-icon{
-    min-width: 25px;
+   
     text-align: center;
     font-size: 14px;
     color: #6A6B6B;
+  }
+  .Navication-button{
+    background-color:white !important;
+    color: #029e9d !important;
+    padding: 8px 15px !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center;
+    border:1px solid rgb(228, 225, 225);
+  }
+  .Navication-button:hover{
+    background-color:#029e9d !important;
+    color: white !important;
+  }
+
+  .anchor-tag:hover{
+color: #0d6efd;;
   }
