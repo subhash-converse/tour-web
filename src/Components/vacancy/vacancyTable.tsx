@@ -36,14 +36,14 @@ const Vacancytable = () => {
       <table className='w-full'>
         
           <tr className=' bg-white'>
-            <th className=''> Id</th>
-            <th >Openings</th>
-            <th >Department</th>
-            <th >Publish date</th>
-            <th >Location</th>
-            <th >Mainduties</th>
-            <th >Experience</th>
-            <th>Action</th>
+            <th className=''> ID</th>
+            <th >OPENINGS</th>
+            <th >DEPARTMENT</th>
+            <th >PUBLISH DATE</th>
+            <th >LOCATION</th>
+            <th >MAIN DUTIES</th>
+            <th >EXPERIENCE</th>
+            <th>ACTION</th>
           </tr>
         
         
@@ -57,7 +57,7 @@ const Vacancytable = () => {
               <td  className=''>{row.dob}</td>
               <td >{row.gender}</td>
               <td >{row.openings}</td>
-              <td ><span className='flex gap-2 text-[#029e9d] justify-start'><FontAwesomeIcon icon={faPenToSquare}/><FontAwesomeIcon icon={faDeleteLeft} /></span></td>
+              <td ><span className='action-buttons'><FontAwesomeIcon icon={faPenToSquare} className='tb-icon'/><FontAwesomeIcon icon={faDeleteLeft}className='tb-icon' /></span></td>
             </tr>
           ))}
         

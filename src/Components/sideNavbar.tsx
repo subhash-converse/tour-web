@@ -6,8 +6,12 @@ import { Avatar } from '@mui/material';
 import "../App.css"
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import img from '../Components/images/1.jpg';
+import Vacancylist from './vacancy/vacancyList';
+import Addjovvacancy from './addJob';
+import Candidatelist from './candidate/candidateList';
 import Routing from './routing';
 import {Link} from 'react-router-dom';
 
@@ -23,7 +27,7 @@ const Sidenavbar = () => {
 
   const userToggle = () => {
     setUserListVisible(!userListVisible);
-    setUserButtonColor(userListVisible ? '#20B2AA' : 'black');
+    setUserButtonColor(userListVisible ? 'black' : '#20B2AA');
     console.log(userButtonColor)
   };
 
@@ -49,11 +53,11 @@ const Sidenavbar = () => {
 
           {(navVisible ? <div className='menu-bar  bg-white z-10 border-r-[1px] border-gray-200 pt-1 flex items-center min-w-[240px] px-[25px] '>
                          <a href="" className='w-full'><img src={logo}  alt="logo" className='  h-[29px] w-[131px] lg:inline-block lg:justify-self-start logo-trans'/></a>
-                         <FontAwesomeIcon icon={faXmark} className='text-[rgb(121,135,161)] text-xl'  onClick={navication}/>
+                         <FontAwesomeIcon icon={faBars} className='text-[rgb(121,135,161)] text-lg '  onClick={navication}/>
                          </div>
                           :
                           <div className='menu-bar min-w-[70px] z-[1] border-r-[1px] bg-white border-gray-200 p-5 flex items-center justify-center'>
-                          <FontAwesomeIcon icon={faBars} className='text-[rgb(121,135,161)] flex justify-self-center'onClick={navication}  />
+                          <FontAwesomeIcon icon={faXmark} className='text-[rgb(121,135,161)] flex justify-self-center text-xl'onClick={navication}  />
                          </div>
                           )}
 
@@ -83,7 +87,7 @@ const Sidenavbar = () => {
 
          
           {(navVisible ? 
-          <div className='menu-bar  fixed pt-[25px] pb-[50px] bg-white flex flex-col h-[92vh] border-r-[1px] border-gray-200 lg:relative lg:inline-block min-w-[240px]  '>
+          <div className='menu-bar  fixed pt-[25px] pb-[50px] z-10 bg-white flex flex-col h-[92vh] border-r-[1px] border-gray-200 lg:relative lg:inline-block min-w-[240px]  '>
             {/* user management */}
             <div className='px-[25px]'>
               <button className='flex items-center  py-[10px] w-full  nav-button' style={{ color: userButtonColor }} onClick={userToggle}> 
@@ -143,7 +147,7 @@ const Sidenavbar = () => {
            )}
 
           {/* table or form content */}
-          <div className='shadow-inner flex flex-col  shadow-gray-200 overflow-scroll w-full lg:h-[93vh]  md:justify-between '>
+          <div className='table-con shadow-inner flex flex-col  shadow-gray-200 overflow-scroll w-full lg:h-[93vh]  md:justify-between '>
           <div className='p-[25px]'>
           <Routing/>
           {/* <Candidatelist/> */}
@@ -153,9 +157,9 @@ const Sidenavbar = () => {
           
           
           {/* copy right */}
-          <div className=' w-full flex p-5 flex-col text-[#029e9d] text-sm items-center border-t-[1px] border-gray-200 md:flex-row md: justify-between'>
-            <span>Copyright <span>&copy;</span>2022 Travalin</span>
-            <span>Powered By <span><FontAwesomeIcon icon={faHeart} /></span> Bizberg Themes</span>
+          <div className=' w-full flex p-5 flex-col text-[#029e9d] text-[13px] items-center border-t-[1px] border-gray-200 md:flex-row md: justify-between'>
+            <span>Copyright <span>&copy;</span>2022 <a href="https://htmldesigntemplates.com/html/travelin/index.html" target='_blank'>Travalin</a></span>
+            <span className='text-[#7987a1]'>Powered By <span className='text-[#0d6efd]'><FavoriteBorderIcon /></span> Bizberg Themes</span>
           </div>
           </div>
           

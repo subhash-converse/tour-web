@@ -37,18 +37,18 @@ const CandidateTable = () => {
 
     <div>
     
-      <table className='w-full'>
+      <table className='w-full h-full'>
         
-          <tr className=' bg-white '>
-            <th className=''>Dessert id</th>
-            <th >image</th>
-            <th >name</th>
-            <th >email</th>
-            <th >phone</th>
-            <th >dob</th>
-            <th >gender</th>
-            <th >department</th>
-            <th >Action</th>
+          <tr className=' bg-white sticky top-0 '>
+            <th className=''>ID</th>
+            <th >IMAGE</th>
+            <th >NAME</th>
+            <th >EMAIL</th>
+            <th >PHONE</th>
+            <th >DOB</th>
+            <th >GENDER</th>
+            <th >DEPRTMENT</th>
+            <th >ACTION</th>
           </tr>
         
         
@@ -62,7 +62,7 @@ const CandidateTable = () => {
               <td  className=''>{row.dob}</td>
               <td >{row.gender}</td>
               <td >{row.openings}</td>
-              <td ><span className='flex gap-2 text-[#029e9d] justify-start'><FontAwesomeIcon icon={faPenToSquare}/><FontAwesomeIcon icon={faDeleteLeft} /></span></td>
+              <td ><span className=' action-buttons'><FontAwesomeIcon icon={faPenToSquare} className='tb-icon'/><FontAwesomeIcon icon={faDeleteLeft}className='tb-icon' /></span></td>
             </tr>
           ))}
         

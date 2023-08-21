@@ -60,7 +60,7 @@ const Addjovvacancy = () => {
       </form>
         
         <div className='flex justify-center mt-9'>
-        <button className='bg-[#029e9d] text-white px-5 py-3 rounded-xl flex gap-2'><span><FontAwesomeIcon icon={faArrowLeft} /></span><span className='text-[15px]'>Submit</span></button>
+        <button className='Export-button'><span className='text-[15px]'>Submit</span></button>
         </div>
         </div>
         

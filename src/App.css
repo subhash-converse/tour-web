@@ -2,6 +2,10 @@ body{
     font-family:"Roboto", Helvetica, sans-serif;
     font-size: 14px;
 }
+
+body::-webkit-scrollbar{
+    display: none;
+  }
 .nav-list{
     height: 28px;
     display: flex;
@@ -41,6 +45,13 @@ body{
     box-shadow: 0 0 10px 0 rgb(183 192 206/20%);
         border-radius:10px ;
 }
+.shadows::-webkit-scrollbar{
+    display: none;
+  }
+  .table-con::-webkit-scrollbar{
+    display: none;
+  }
+
 table tr{
     border-bottom:  1px solid rgb(228, 225, 225); 
     background-color: white;
@@ -53,14 +64,14 @@ table>tr>td{
 }
 table th{
     font-weight: 500;
-    padding: 20px 25px;
+    padding: 20px 25px 20px 25px;
     text-align: left;
     background-color: white;
     font-weight:600;
    
 
 }
-tr:nth-child(even){
+tr:nth-child(odd){
     background-color: #fbfbfb !important;
 }
 
@@ -92,13 +103,14 @@ tr:nth-child(even){
     border-radius: 6px;
 }
 .Export-button{
-    /* backgroun-[#029e9d] text-white px-4 py-3 rounded-xl flex gap-2 */
     background-color:#029e9d !important;
     color: white !important;
     padding: 12px 18px !important;
     border-radius: 12px !important;
     display: flex !important;
     align-items: center;
+    font-size: 15px;
+    
     
 }
 .Export-button:hover{
@@ -206,3 +218,23 @@ color: #0d6efd;;
     border-radius: 10px;
     background-color: white;
   }
+.action-buttons{
+    display: flex;
+    gap: 8px;
+    color: #029e9d;
+    justify-content: start;
+    font-size: 20px;
+    
+}
+
+.tb-icon:hover{
+  color: #0d6efd;
+}
+
+select{
+	background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95%;
+	-moz-appearance: none; 
+	-webkit-appearance: none; 
+	appearance: none;
+        padding : 4px 20px
+}

@@ -1,4 +1,4 @@
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faFileExport, faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as React from 'react';
 import Button from '@mui/material/Button';
@@ -46,7 +46,10 @@ const Candidatelist = () => {
         </div>
 
         <div className=''>
-        <button className='Export-button' onClick={handleClickOpen}><Link to="/vacancylist">Export</Link></button>
+        <button className='Export-button' onClick={handleClickOpen}><Link to="/vacancylist">
+          <span><FontAwesomeIcon icon={faFileExport} /></span>
+          <span className='pl-[10px]'>Export</span></Link>
+          </button>
         </div>
         {/* <div className='mt-7 md:mt-0'>
         <div>
@@ -91,8 +94,8 @@ const Candidatelist = () => {
           <span className='flex justify-center font-bold'>Candidate List</span>
         </div>
 
-        <div className='flex flex-col  gap-y-7 mt-3 md:flex-row gap-x-6 lg:mt-0 xl:w-[75%]'>
-        <input type="text" placeholder='Search by catogory title' className='border-[1px] w-[full] border-gray-200  rounded-lg outline-none px-[10px] h-12 md:w-[210px]  xl:w-[50%]'/>
+        <div className='flex flex-col  gap-y-7 mt-3 md:flex-row gap-x-6 lg:mt-0 w-full xl:w-[75%]'>
+        <input type="text" placeholder='Search by catogory title' className='border-[1px] w-[full] border-gray-200  rounded-lg outline-none px-[10px] h-12 md:w-[50%]  '/>
         <select name="catogory" id="catogory" className='border-[1px] w-full  border-gray-200 rounded-lg outline-none px-[10px] h-12 md:w-[25%] text-[#7987AD]'>
           <option value="catogory">catogory</option>
           <option value="1" className='drop-option'>1</option>

@@ -4,6 +4,8 @@ import Slide from '@mui/material/Slide';
 import { TransitionProps } from '@mui/material/transitions';
 import {Link} from 'react-router-dom'
 import Vacancytable from './vacancyTable';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 
 const Transition = React.forwardRef(function Transition(
@@ -39,7 +41,7 @@ const Vacancylist = () => {
         </div>
 
         <div className=''>
-        <button className='Export-button' onClick={handleClickOpen}><Link to="/addvacancy">Add A Job</Link></button>
+        <button className='Export-button' onClick={handleClickOpen}><Link to="/addvacancy"><span className='pr-[10px]'><FontAwesomeIcon icon={faPlus} /></span> Add A Job</Link></button>
         </div>
         {/* <div className='mt-7 md:mt-0'>
         <div>
@@ -84,16 +86,16 @@ const Vacancylist = () => {
           <span className='flex justify-center font-bold'>Vacancy List</span>
         </div>
 
-        <div className='flex flex-col  gap-y-7 mt-3 md:flex-row gap-x-6 lg:mt-0 xl:w-[75%]'>
-        <input type="text" placeholder='Search by catogory title' className='border-[1px] w-[full] border-gray-200  rounded-lg outline-none px-[10px] h-12 md:w-[210px]  xl:w-[50%]'/>
+        <div className='flex flex-col  gap-y-7 mt-3 md:flex-row gap-x-6 lg:mt-0 w-full xl:w-[75%]'>
+        <input type="text" placeholder='Search by catogory title' className='border-[1px] w-[full] border-gray-200  rounded-lg outline-none px-[10px] h-12  md:w-[50%]'/>
         <select name="catogory" id="catogory" className='border-[1px] w-full  border-gray-200 rounded-lg outline-none px-[10px] h-12 md:w-[25%] text-[#7987AD]'>
-          <option value="catogory">catogory</option>
+          <option value=""selected disabled>catogory</option>
           <option value="1" className='drop-option'>1</option>
           <option value="2" className='drop-option'>2</option>
           <option value="3" className='drop-option'>3</option>
         </select>
         <select name="entries" id="enrties" className='border-[1px] border-gray-200 w-full rounded-lg outline-none px-[10px] h-12 md:w-[25%] text-[#7987AD]'>
-          <option value="Show Entries">Show Entries</option>
+          <option value="" selected disabled>Show Entries</option>
           <option value="10" className='drop-option'>10</option>
           <option value="20" className='drop-option'>20</option>
           <option value="30" className='drop-option'>30</option>
