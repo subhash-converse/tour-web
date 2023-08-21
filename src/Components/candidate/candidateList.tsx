@@ -1,6 +1,5 @@
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Candidatelist from './candidateTable'
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
@@ -10,6 +9,8 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import { TransitionProps } from '@mui/material/transitions';
+import CandidateTable from './candidateTable';
+import {Link} from 'react-router-dom'
 
 
 const Transition = React.forwardRef(function Transition(
@@ -22,7 +23,7 @@ const Transition = React.forwardRef(function Transition(
 });
 
 
-const Createjobvacancy = () => {
+const Candidatelist = () => {
 
   const [open, setOpen] = React.useState(false);
 
@@ -45,7 +46,7 @@ const Createjobvacancy = () => {
         </div>
 
         <div className=''>
-        <button className='Export-button' onClick={handleClickOpen}>Export</button>
+        <button className='Export-button' onClick={handleClickOpen}><Link to="/vacancylist">Export</Link></button>
         </div>
         {/* <div className='mt-7 md:mt-0'>
         <div>
@@ -109,7 +110,7 @@ const Createjobvacancy = () => {
 
       {/* candidate table */}
       <div className=' shadows max-h-[496px] overflow-scroll p-[24px] bg-white mb-[15px]'>
-        <Candidatelist/>
+        <CandidateTable/>
       </div>
 
       {/* pagenation */}
@@ -127,4 +128,4 @@ const Createjobvacancy = () => {
   )
 }
 
-export default Createjobvacancy
+export default Candidatelist

@@ -32,14 +32,14 @@ import img from '../images/1.jpg';
   ];
 
 
-const Candidatelist = () => {
+const CandidateTable = () => {
   return (
 
     <div>
     
       <table className='w-full'>
         
-          <tr className='fi bg-white '>
+          <tr className=' bg-white '>
             <th className=''>Dessert id</th>
             <th >image</th>
             <th >name</th>
@@ -72,4 +72,4 @@ const Candidatelist = () => {
   )
 }
 
-export default Candidatelist
+export default CandidateTable

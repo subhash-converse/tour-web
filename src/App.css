@@ -201,3 +201,8 @@ tr:nth-child(even){
   .anchor-tag:hover{
 color: #0d6efd;;
   }
+  .add-vacancy-form{
+    box-shadow: 0 0 10px 0 rgb(183 192 206/20%);
+    border-radius: 10px;
+    background-color: white;
+  }

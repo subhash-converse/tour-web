@@ -1,23 +1,30 @@
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import { Link } from 'react-router-dom'
+import Vacancylist from './vacancy/vacancyList'
+import Vacancytable from './vacancy/vacancyTable'
 
 const Addjovvacancy = () => {
   return (
     <div className='w-full '>
       {/* button */}
-      <div className='w-full pt-8 flex flex-col items-center md:flex-row md:justify-between'>
-        <div className='text-[#029e9d] text-md'>
-          <span>Dashboard</span> / <span className='text-[rgb(35,35,35)]'>All Candidate List</span>
+      <div className='w-full flex flex-col mb-[15px] items-center md:flex-row md:justify-between'>
+        <div className='text-[#029e9d] text-sm'>
+          <a href='#' className='anchor-tag'>Dashboard</a> / <span className='text-[#7987a1]'>Add A Vacancy</span>
         </div>
-        <div className='mt-7 md:mt-0'>
-        <button className='bg-[#029e9d] text-white px-4 py-3 rounded-xl flex gap-2'><span><FontAwesomeIcon icon={faArrowLeft} /></span><span className='text-[15px]'>Back To List</span></button>
+
+        <div className=''>
+        <button className='Export-button'><Link to="/vacancylist">
+          <span><FontAwesomeIcon icon={faArrowLeft} /></span>
+          <span className='pl-[10px]'><Link to="/vacancylist">Back to List</Link> </span></Link>
+          </button>
         </div>
       </div>
 
       {/* add candidate form */}
-      <div className='bg-white py-4' >
-      <form className='w-full grid grid-cols-1 lg:grid-cols-2 px-6  justify-items-center gap-x-6 gap-y-6  mt-10'>
+      <div className=' py-4 add-vacancy-form' >
+      <form className='w-full grid grid-cols-1 lg:grid-cols-2 px-[3.5rem]  justify-items-center gap-x-10 gap-y-10  mt-10'>
         
       <div className='flex flex-col w-full gap-2'>
           <label htmlFor="candidateid" className=''>Openings</label>

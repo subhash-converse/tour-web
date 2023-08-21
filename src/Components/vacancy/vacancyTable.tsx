@@ -1,7 +1,5 @@
 import { faDeleteLeft, faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Table from '@mui/material/Table';
-import TableContainer from '@mui/material/TableContainer';
 
 
 function createData(
@@ -34,10 +32,10 @@ function createData(
 
 const Vacancytable = () => {
   return (
-    <TableContainer className='h-scree' >
-      <Table className='table'>
+    <div className=''>
+      <table className='w-full'>
         
-          <tr className='sticky top-0'>
+          <tr className=' bg-white'>
             <th className=''> Id</th>
             <th >Openings</th>
             <th >Department</th>
@@ -45,7 +43,6 @@ const Vacancytable = () => {
             <th >Location</th>
             <th >Mainduties</th>
             <th >Experience</th>
-            <th >department</th>
             <th>Action</th>
           </tr>
         
@@ -60,12 +57,12 @@ const Vacancytable = () => {
               <td  className=''>{row.dob}</td>
               <td >{row.gender}</td>
               <td >{row.openings}</td>
-              <td ><span className='flex gap-2 text-[#029e9d] justify-center'><FontAwesomeIcon icon={faPenToSquare}/><FontAwesomeIcon icon={faDeleteLeft} /></span></td>
+              <td ><span className='flex gap-2 text-[#029e9d] justify-start'><FontAwesomeIcon icon={faPenToSquare}/><FontAwesomeIcon icon={faDeleteLeft} /></span></td>
             </tr>
           ))}
         
-      </Table>
-    </TableContainer>
+      </table>
+    </div>
   )
 }
 
