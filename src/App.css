@@ -8,7 +8,6 @@ body::-webkit-scrollbar{
   }
 .nav-list{
     height: 28px;
-    display: flex;
     align-items: center;
     font-size: 14px;
 
@@ -22,8 +21,12 @@ body::-webkit-scrollbar{
 
 .nav-button{
 
-    border-bottom: 0.5px dashed rgb(228, 225, 225);
+    
     height: 42px;
+}
+.nav-btn-boder{
+  border-bottom: 0.5px dashed rgb(228, 225, 225);
+
 }
 
 .nav-button:hover{
@@ -38,8 +41,8 @@ body::-webkit-scrollbar{
     border-bottom: 0.5px solid rgb(228, 225, 225);
 }
 .list-type{
-   padding: 0px 0px 15px 33px;
-   list-style-type: disc !important;
+   padding: 10px 0px 0px 33px;
+   list-style-type: circle !important;
 }
 .shadows{
     box-shadow: 0 0 10px 0 rgb(183 192 206/20%);
@@ -59,15 +62,19 @@ table tr{
 }
 table>tr>td{
     padding: 8px 25px;
+    width: 131px;
+    height: 59px;
     text-align: left;
     
 }
 table th{
-    font-weight: 500;
-    padding: 20px 25px 20px 25px;
+    padding: 44px 25px 20px 25px;
     text-align: left;
     background-color: white;
     font-weight:600;
+    z-index: auto;
+    background-color: white;
+    
    
 
 }
@@ -209,6 +216,15 @@ tr:nth-child(odd){
     background-color:#029e9d !important;
     color: white !important;
   }
+  .Navication-button-1{
+    background-color:#029e9d !important;
+    color: white !important;
+    padding: 8px 15px !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center;
+    border:1px solid rgb(228, 225, 225);
+  }
 
   .anchor-tag:hover{
 color: #0d6efd;;
@@ -224,17 +240,9 @@ color: #0d6efd;;
     color: #029e9d;
     justify-content: start;
     font-size: 20px;
-    
+     
 }
 
 .tb-icon:hover{
   color: #0d6efd;
-}
-
-select{
-	background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95%;
-	-moz-appearance: none; 
-	-webkit-appearance: none; 
-	appearance: none;
-        padding : 4px 20px
 }

@@ -1,6 +1,7 @@
 import { faDeleteLeft, faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import img from '../images/1.jpg';
+import BackspaceOutlinedIcon from '@mui/icons-material/BackspaceOutlined';
 
   
   function createData(
@@ -37,7 +38,7 @@ const CandidateTable = () => {
 
     <div>
     
-      <table className='w-full h-full'>
+      <table className='w-full '>
         
           <tr className=' bg-white sticky top-0 '>
             <th className=''>ID</th>
@@ -62,7 +63,7 @@ const CandidateTable = () => {
               <td  className=''>{row.dob}</td>
               <td >{row.gender}</td>
               <td >{row.openings}</td>
-              <td ><span className=' action-buttons'><FontAwesomeIcon icon={faPenToSquare} className='tb-icon'/><FontAwesomeIcon icon={faDeleteLeft}className='tb-icon' /></span></td>
+              <td ><span className=' action-buttons'><FontAwesomeIcon icon={faPenToSquare} className='tb-icon'/><BackspaceOutlinedIcon className='tb-icon'/></span></td>
             </tr>
           ))}
         

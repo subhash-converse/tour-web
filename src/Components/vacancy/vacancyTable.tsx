@@ -1,33 +1,33 @@
 import { faDeleteLeft, faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import BackspaceOutlinedIcon from '@mui/icons-material/BackspaceOutlined'
+import FileOpenOutlinedIcon from '@mui/icons-material/FileOpenOutlined';
 
 function createData(
     id: number,
-    img: string,
-    name: string,
-    email: any,
-    phone:number,
-    dob: string,
-    gender:string,
-    openings:string
+    openings: string,
+    department: string,
+    publishDate: any,
+    location:number,
+    mainDuties: string,
+    experience:string,
+    
   ) {
-    return { id,img,name, email,phone, dob, gender,openings};
+    return { id,openings,department, publishDate,location, mainDuties, experience};
   }
   
   const rows = [
-    createData(1,"img1","subhash","dddd@gmail.com",1234567890,"13/12/23","male","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
-    createData(2,"img1","monika","dddd@gmail.com",1234567890,"13/12/23","female","csc"),
+    createData(1,"img1","csc","13/04/2002",1111,"mmmmmmmmmmmmmmmmmm","eeeeeeeeeeeee"),
+    createData(1,"img1","csc","13/04/2002",1111,"mmmmmmmmmmmmmmmmmm","eeeeeeeeeeeee"),
+    createData(1,"img1","csc","13/04/2002",1111,"mmmmmmmmmmmmmmmmmm","eeeeeeeeeeeee"),
+    createData(1,"img1","csc","13/04/2002",1111,"mmmmmmmmmmmmmmmmmm","eeeeeeeeeeeee"),
+    createData(1,"img1","csc","13/04/2002",1111,"mmmmmmmmmmmmmmmmmm","eeeeeeeeeeeee"),
+    createData(1,"img1","csc","13/04/2002",1111,"mmmmmmmmmmmmmmmmmm","eeeeeeeeeeeee"),
+    createData(1,"img1","csc","13/04/2002",1111,"mmmmmmmmmmmmmmmmmm","eeeeeeeeeeeee"),
+    createData(1,"img1","csc","13/04/2002",1111,"mmmmmmmmmmmmmmmmmm","eeeeeeeeeeeee"),
+    createData(1,"img1","csc","13/04/2002",1111,"mmmmmmmmmmmmmmmmmm","eeeeeeeeeeeee"),
+    createData(1,"img1","csc","13/04/2002",1111,"mmmmmmmmmmmmmmmmmm","eeeeeeeeeeeee")
+
   ];
 
 const Vacancytable = () => {
@@ -35,7 +35,7 @@ const Vacancytable = () => {
     <div className=''>
       <table className='w-full'>
         
-          <tr className=' bg-white'>
+          <tr className=' bg-white sticky top-0'>
             <th className=''> ID</th>
             <th >OPENINGS</th>
             <th >DEPARTMENT</th>
@@ -49,15 +49,14 @@ const Vacancytable = () => {
         
           {rows.map((row) => (
             <tr>
-              <td >{row.id}</td>
-              <td >{row.img}</td>
-              <td >{row.name}</td>
-              <td >{row.email}</td>
-              <td >{row.phone}</td>
-              <td  className=''>{row.dob}</td>
-              <td >{row.gender}</td>
-              <td >{row.openings}</td>
-              <td ><span className='action-buttons'><FontAwesomeIcon icon={faPenToSquare} className='tb-icon'/><FontAwesomeIcon icon={faDeleteLeft}className='tb-icon' /></span></td>
+              <td>{row.id}</td>
+              <td>{row.openings}</td>
+              <td>{row.department}</td>
+              <td>{row.publishDate}</td>
+              <td> {row.location}</td>
+              <td><span className=' tb-icon'><FileOpenOutlinedIcon className=' tb-icon action-buttons'/> <span className=' tb-icon'>Main Duties</span></span></td>
+              <td><span className=' tb-icon'><FileOpenOutlinedIcon className=' tb-icon action-buttons'/> <span className=' tb-icon'>Experience</span></span></td>
+              <td><span className='action-buttons'><FontAwesomeIcon icon={faPenToSquare} className='tb-icon'/><BackspaceOutlinedIcon className='tb-icon'/></span></td>
             </tr>
           ))}
         

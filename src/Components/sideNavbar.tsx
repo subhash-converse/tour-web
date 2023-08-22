@@ -125,14 +125,14 @@ const Sidenavbar = () => {
                   </ul>)}
             </div>
           </div> :
-          <div className='menu-bar pt-[25px] pb-[50px]  hidden fixed bg-white  h-[92vh] border-r-[1px] border-gray-200 md:relative md:inline-block  w-[70px] '>
+          <div className='menu-bar pt-[25px] pb-[50px]  hidden fixed bg-white  h-[92vh] border-r-[1px] border-gray-200 md:relative md:inline-block  min-w-[70px] '>
           {/* user management */}
           <div className=''>
-            <button className='flex  px-[25px] items-center  w-full  nav-button' style={{ color: userButtonColor }} onClick={userToggle}> 
-              
-              <span className='w-full'><FontAwesomeIcon icon={faUser} className='navbar-icon'/></span>
-              
-            </button>
+          <button className='nav-button  px-[25px] flex items-center  justify-between w-full' style={{ color: careerButtonColor }} onClick={careerToggle} >
+          
+          <span className='navbar-icon'><FontAwesomeIcon icon={faUser} /></span>
+        
+        </button> 
           </div>
           {/* candidate */}
           <div className=''>
@@ -157,7 +157,7 @@ const Sidenavbar = () => {
           
           
           {/* copy right */}
-          <div className=' w-full flex p-5 flex-col text-[#029e9d] text-[13px] items-center border-t-[1px] border-gray-200 md:flex-row md: justify-between'>
+          <div className=' w-full flex px-[25px] py-2 flex-col text-[#029e9d] text-[13px] items-center border-t-[1px] border-gray-200 md:flex-row md: justify-between'>
             <span>Copyright <span>&copy;</span>2022 <a href="https://htmldesigntemplates.com/html/travelin/index.html" target='_blank'>Travalin</a></span>
             <span className='text-[#7987a1]'>Powered By <span className='text-[#0d6efd]'><FavoriteBorderIcon /></span> Bizberg Themes</span>
           </div>

@@ -1,4 +1,4 @@
-import { faFileExport, faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faBackspace, faFileExport, faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as React from 'react';
 import Button from '@mui/material/Button';
@@ -11,6 +11,7 @@ import Slide from '@mui/material/Slide';
 import { TransitionProps } from '@mui/material/transitions';
 import CandidateTable from './candidateTable';
 import {Link} from 'react-router-dom'
+
 
 
 const Transition = React.forwardRef(function Transition(
@@ -26,6 +27,8 @@ const Transition = React.forwardRef(function Transition(
 const Candidatelist = () => {
 
   const [open, setOpen] = React.useState(false);
+  const [click,setClick]=React.useState(false);
+  const[btnColor,setBtnColor]=React.useState('Navication-button')
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -35,6 +38,14 @@ const Candidatelist = () => {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const Backsapace = ()=>{
+    setClick(!click);
+     setBtnColor(click ? 'Navication-button':'Navication-button-1');
+     console.log(btnColor)
+    
+  }
+ 
 
   return (
     <div className=''>
@@ -46,9 +57,9 @@ const Candidatelist = () => {
         </div>
 
         <div className=''>
-        <button className='Export-button' onClick={handleClickOpen}><Link to="/vacancylist">
+        <button className='Export-button' onClick={handleClickOpen}>
           <span><FontAwesomeIcon icon={faFileExport} /></span>
-          <span className='pl-[10px]'>Export</span></Link>
+          <span className='pl-[10px]'>Export</span>
           </button>
         </div>
         {/* <div className='mt-7 md:mt-0'>
@@ -112,18 +123,18 @@ const Candidatelist = () => {
       </div>
 
       {/* candidate table */}
-      <div className=' shadows max-h-[496px] overflow-scroll p-[24px] bg-white mb-[15px]'>
+      <div className=' shadows max-h-[496px] overflow-scroll p-[24px] pt-0 bg-white mb-[15px]'>
         <CandidateTable/>
       </div>
 
       {/* pagenation */}
       <div className='w-full'>
         <div  className='flex gap-2 justify-center lg:justify-start'>
-        <button className='Navication-button' onClick={handleClickOpen}>Previos</button>
-        <button className='Navication-button' onClick={handleClickOpen}>1</button>
-        <button className='Navication-button' onClick={handleClickOpen}>2</button>
-        <button className='Navication-button' onClick={handleClickOpen}>3</button>
-        <button className='Navication-button' onClick={handleClickOpen}>Next</button>
+        <button className={btnColor} onClick={Backsapace}>Previous</button>
+        <button className={btnColor} onClick={Backsapace}>1</button>
+        <button className={btnColor} onClick={Backsapace}>2</button>
+        <button className={btnColor} onClick={Backsapace}>3</button>
+        <button className={btnColor} onClick={Backsapace}>Next</button>
         </div>
       </div>
         

@@ -23,36 +23,36 @@ const Addjovvacancy = () => {
       </div>
 
       {/* add candidate form */}
-      <div className=' py-4 add-vacancy-form' >
-      <form className='w-full grid grid-cols-1 lg:grid-cols-2 px-[3.5rem]  justify-items-center gap-x-10 gap-y-10  mt-10'>
+      <div className=' py-4 add-vacancy-form px-[3.5rem]' >
+
+        <div>
+          <span className='text-'>Add A Job</span>
+        </div>
         
-      <div className='flex flex-col w-full gap-2'>
+      <form className='w-full grid grid-cols-1 lg:grid-cols-2   justify-items-center gap-x-10 gap-y-10  mt-10'>
+      <div className='flex flex-col w-full gap-2 '>
           <label htmlFor="candidateid" className=''>Openings</label>
-          <input type="text" id='candidateid' className='border-[1px]  w-full h-10 md:h-12 outline-none rounded-lg border-gray-200'/>
+          <input type="text" id='candidateid' className='border-[1px] px-3 w-full h-10 md:h-12 outline-none rounded-lg border-gray-200'/>
         </div>  
         <div className='flex flex-col w-full  gap-2'>
-          <label htmlFor="candidateid" className=''>Openings</label>
-          <input type="text" id='candidateid' className='border-[1px]  w-full h-10 md:h-12 outline-none rounded-lg border-gray-200'/>
-        </div>
-        <div className='flex flex-col w-full  gap-2'>
           <label htmlFor="candidateid" className=''>Department</label>
-          <input type="text" id='candidateid' className='border-[1px]  w-full h-10 md:h-12 outline-none rounded-lg border-gray-200'/>
+          <input type="text" id='candidateid' className='border-[1px] px-3 w-full h-10 md:h-12 outline-none rounded-lg border-gray-200'/>
         </div>
         <div className='flex flex-col w-full  gap-2'>
           <label htmlFor="candidateid" className=''>Location</label>
-          <input type="text" id='candidateid' className='border-[1px]  w-full h-10 md:h-12 outline-none rounded-lg border-gray-200'/>
+          <input type="text" id='candidateid' className='border-[1px] px-3 w-full h-10 md:h-12 outline-none rounded-lg border-gray-200'/>
         </div>
         <div className='flex flex-col w-full  gap-2'>
           <label htmlFor="candidateid" className=''>Published Date</label>
-          <input type="text" id='candidateid' className='border-[1px]  w-full h-10 md:h-12 outline-none rounded-lg border-gray-200'/>
+          <input type="text" id='candidateid' className='border-[1px] px-3 w-full h-10 md:h-12 outline-none rounded-lg border-gray-200'/>
         </div>
         <div className='flex flex-col w-full  gap-2'>
           <label htmlFor="candidateid" className=''>Main Duties</label>
-          <input type="text" id='candidateid' className='border-[1px]  w-full h-10 md:h-12 outline-none rounded-lg border-gray-200'/>
+          <input type="text" id='candidateid' className='border-[1px] px-3 w-full h-10 md:h-12 outline-none rounded-lg border-gray-200'/>
         </div>
         <div className='flex flex-col w-full  gap-2'>
           <label htmlFor="candidateid" className=''>Experience</label>
-          <input type="text" id='candidateid' className='border-[1px]  w-full h-10 md:h-12 outline-none rounded-lg border-gray-200'/>
+          <input type="text" id='candidateid' className='border-[1px] px-3 w-full h-10 md:h-12 outline-none rounded-lg border-gray-200'/>
         </div>
 
         

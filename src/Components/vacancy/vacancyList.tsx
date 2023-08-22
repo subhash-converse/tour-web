@@ -104,7 +104,7 @@ const Vacancylist = () => {
       </div>
 
       {/* candidate table */}
-      <div className=' shadows max-h-[496px] overflow-scroll p-[24px] bg-white mb-[15px]'>
+      <div className=' shadows max-h-[496px] overflow-scroll p-[24px] pt-0 bg-white mb-[15px]'>
         <Vacancytable/>
       </div>
 
