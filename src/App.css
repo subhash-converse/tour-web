@@ -48,9 +48,8 @@ body::-webkit-scrollbar{
     box-shadow: 0 0 10px 0 rgb(183 192 206/20%);
         border-radius:10px ;
 }
-.shadows::-webkit-scrollbar{
-    display: none;
-  }
+
+  
   .table-con::-webkit-scrollbar{
     display: none;
   }

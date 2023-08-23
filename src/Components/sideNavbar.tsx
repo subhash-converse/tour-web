@@ -58,6 +58,7 @@ const Sidenavbar = () => {
                           <FontAwesomeIcon icon={faXmark} className='text-[rgb(121,135,161)] flex justify-self-center text-xl'onClick={navication}  />
                          </div>
                           )}
+                          
 
        
       

@@ -1,6 +1,6 @@
 import { faDeleteLeft, faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import img from '../Components/images/1.jpg';
+import img from '../images/1.jpg';
 import BackspaceOutlinedIcon from '@mui/icons-material/BackspaceOutlined';
 
   

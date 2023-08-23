@@ -24,8 +24,8 @@ const Addjovvacancy = () => {
       {/* add candidate form */}
       <div className=' py-4 add-vacancy-form px-[3.5rem]' >
 
-        <div>
-          <span className='text-'>Add A Job</span>
+        <div className='mt-5'>
+          <span className='text-[16px] font-bold'>Add A Job</span>
         </div>
         
       <form className='w-full grid grid-cols-1 lg:grid-cols-2   justify-items-center gap-x-10 gap-y-10  mt-10'>
