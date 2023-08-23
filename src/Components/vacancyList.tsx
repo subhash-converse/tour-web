@@ -22,14 +22,18 @@ const Vacancylist = () => {
 
   const [open, setOpen] = React.useState(false);
 
-  const handleClickOpen = () => {
-    setOpen(true);
+  // const handleClickOpen = () => {
+  //   setOpen(true);
     
-  };
+  // };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  function handleClickOpen(x:any){
+    return(
+      setOpen(true)
+    ) 
+  }
+
+
 
   return (
     <div className=''>
@@ -37,7 +41,7 @@ const Vacancylist = () => {
 
       <div className='w-full flex flex-col mb-[15px] items-center md:flex-row md:justify-between'>
         <div className='text-[#029e9d] text-sm'>
-          <a href='#' className='anchor-tag'>Dashboard</a> / <span className='text-[#7987a1]'> Vacancy List</span>
+          <a href='#' className='anchor-tag'>Dashboard</a> / <span>Candiadte</span> / <span className='text-[#7987a1]'> Vacancy List</span>
         </div>
 
         <div className=''>
@@ -111,11 +115,11 @@ const Vacancylist = () => {
       {/* pagenation */}
       <div className='w-full'>
         <div  className='flex gap-2 justify-center lg:justify-start'>
-        <button className='Navication-button' onClick={handleClickOpen}>Previos</button>
-        <button className='Navication-button' onClick={handleClickOpen}>1</button>
-        <button className='Navication-button' onClick={handleClickOpen}>2</button>
-        <button className='Navication-button' onClick={handleClickOpen}>3</button>
-        <button className='Navication-button' onClick={handleClickOpen}>Next</button>
+        <button className='Navication-button' onClick={()=>handleClickOpen('1')}>Previos</button>
+        <button className='Navication-button' onClick={()=>handleClickOpen('2')}>1</button>
+        <button className='Navication-button' onClick={()=>handleClickOpen('3')}>2</button>
+        <button className='Navication-button' onClick={()=>handleClickOpen('4')}>3</button>
+        <button className='Navication-button' onClick={()=>handleClickOpen('5')}>Next</button>
         </div>
       </div>
         

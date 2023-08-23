@@ -10,7 +10,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import { TransitionProps } from '@mui/material/transitions';
 import CandidateTable from './candidateTable';
-import {Link} from 'react-router-dom'
+
 
 
 
@@ -35,14 +35,13 @@ const Candidatelist = () => {
     
   };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
 
-  const Backsapace = ()=>{
+  const Backsapace = (x:number)=>{
     setClick(!click);
      setBtnColor(click ? 'Navication-button':'Navication-button-1');
-     console.log(btnColor)
+    
+     
+     
     
   }
  
@@ -53,7 +52,7 @@ const Candidatelist = () => {
 
       <div className='w-full flex flex-col mb-[15px] items-center md:flex-row md:justify-between'>
         <div className='text-[#029e9d] text-sm'>
-          <a href='#' className='anchor-tag'>Dashboard</a> / <span className='text-[#7987a1]'> Candidate List</span>
+          <a href='#' className='anchor-tag'>Dashboard</a> / <span>Candidate</span> / <span className='text-[#7987a1]'> Candidate List</span>
         </div>
 
         <div className=''>
@@ -113,7 +112,7 @@ const Candidatelist = () => {
           <option value="2" className='drop-option'>2</option>
           <option value="3" className='drop-option'>3</option>
         </select>
-        <select name="entries" id="enrties" className='border-[1px] border-gray-200 w-full rounded-lg outline-none px-[10px] h-12 md:w-[25%] text-[#7987AD]'>
+        <select name="entries" id="entries" className='border-[1px] border-gray-200 w-full rounded-lg outline-none px-[10px] h-12 md:w-[25%] text-[#7987AD]'>
           <option value="Show Entries">Show Entries</option>
           <option value="10" className='drop-option'>10</option>
           <option value="20" className='drop-option'>20</option>
@@ -130,11 +129,11 @@ const Candidatelist = () => {
       {/* pagenation */}
       <div className='w-full'>
         <div  className='flex gap-2 justify-center lg:justify-start'>
-        <button className={btnColor} onClick={Backsapace}>Previous</button>
-        <button className={btnColor} onClick={Backsapace}>1</button>
-        <button className={btnColor} onClick={Backsapace}>2</button>
-        <button className={btnColor} onClick={Backsapace}>3</button>
-        <button className={btnColor} onClick={Backsapace}>Next</button>
+        <button id='btn1' className={btnColor} onClick={()=>Backsapace(1)}>Previous</button>
+        <button id='btn2' className={btnColor} onClick={()=>Backsapace(2)}>1</button>
+        <button id='btn3' className={btnColor} onClick={()=>Backsapace(3)}>2</button>
+        <button id='btn4' className={btnColor} onClick={()=>Backsapace(4)}>3</button>
+        <button id='btn15' className={btnColor} onClick={()=>Backsapace(5)}>Next</button>
         </div>
       </div>
         

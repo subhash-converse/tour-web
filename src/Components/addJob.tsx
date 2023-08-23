@@ -2,8 +2,7 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Vacancylist from './vacancy/vacancyList'
-import Vacancytable from './vacancy/vacancyTable'
+
 
 const Addjovvacancy = () => {
   return (
@@ -44,15 +43,15 @@ const Addjovvacancy = () => {
         </div>
         <div className='flex flex-col w-full  gap-2'>
           <label htmlFor="candidateid" className=''>Published Date</label>
-          <input type="text" id='candidateid' className='border-[1px] px-3 w-full h-10 md:h-12 outline-none rounded-lg border-gray-200'/>
+          <input type="date" id='candidateid' className='border-[1px] px-3 w-full h-10 md:h-12 outline-none rounded-lg border-gray-200'/>
         </div>
         <div className='flex flex-col w-full  gap-2'>
           <label htmlFor="candidateid" className=''>Main Duties</label>
-          <input type="text" id='candidateid' className='border-[1px] px-3 w-full h-10 md:h-12 outline-none rounded-lg border-gray-200'/>
+          <textarea name="" id="" className='border-[1px] px-3 w-full h-10 md:h-20 outline-none rounded-lg border-gray-200'></textarea>
         </div>
         <div className='flex flex-col w-full  gap-2'>
           <label htmlFor="candidateid" className=''>Experience</label>
-          <input type="text" id='candidateid' className='border-[1px] px-3 w-full h-10 md:h-12 outline-none rounded-lg border-gray-200'/>
+          <textarea name="" id="" className='border-[1px] px-3 w-full h-10 md:h-20 outline-none rounded-lg border-gray-200'></textarea>
         </div>
 
         

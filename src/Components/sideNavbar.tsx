@@ -9,21 +9,19 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import img from '../Components/images/1.jpg';
-import Vacancylist from './vacancy/vacancyList';
-import Addjovvacancy from './addJob';
-import Candidatelist from './candidate/candidateList';
 import Routing from './routing';
-import {Link} from 'react-router-dom';
+
+
 
 
 
 
 const Sidenavbar = () => {
   const [userListVisible, setUserListVisible] = useState(false);
-  const [CareerListVisible, setCareerListVisible] = useState(false);
+  const [CareerListVisible, setCareerListVisible] = useState(true);
   const [userButtonColor, setUserButtonColor] = useState('black');
   const [careerButtonColor, setCareerButtonColor] = useState('black');
-  const [navVisible,setNavVisible] =useState(false);
+  const [navVisible,setNavVisible] =useState(true);
 
   const userToggle = () => {
     setUserListVisible(!userListVisible);
@@ -89,7 +87,7 @@ const Sidenavbar = () => {
           {(navVisible ? 
           <div className='menu-bar  fixed pt-[25px] pb-[50px] z-10 bg-white flex flex-col h-[92vh] border-r-[1px] border-gray-200 lg:relative lg:inline-block min-w-[240px]  '>
             {/* user management */}
-            <div className='px-[25px]'>
+            <div className='px-[25px] border-b-[1px] border-dashed border-gray-200'>
               <button className='flex items-center  py-[10px] w-full  nav-button' style={{ color: userButtonColor }} onClick={userToggle}> 
                 <span className='flex items-center w-full '>
                 <span className=' text-start'><FontAwesomeIcon icon={faUser} className='navbar-icon'/></span>
@@ -107,7 +105,7 @@ const Sidenavbar = () => {
                   </ul>)}
             </div>
             {/* candidate */}
-            <div className=' px-[25px]'>
+            <div className=' px-[25px] border-b-[1px] border-dashed border-gray-200'>
             <button className='nav-button flex items-center py-[10px] justify-betweenc  w-full ' style={{ color: careerButtonColor }} onClick={careerToggle} >
             <span className='flex  items-center w-full'>
               <span className='text-start'><FontAwesomeIcon icon={faBriefcase} className='navbar-icon' /></span>
@@ -119,9 +117,9 @@ const Sidenavbar = () => {
             </button>               
                {CareerListVisible && (
                   <ul className='list-type'>
-                      <li className='nav-list'><Link to="/"> All Candidate List</Link></li>
-                      <li className='nav-list'><Link to="/vacancylist"> All Job vacancies</Link></li>
-                      <li className='nav-list'><Link to="/addvacancy">Add Job Vacancy</Link></li>
+                      <li className='nav-list'><a href="/"> All Candidate List</a></li>
+                      <li className='nav-list'><a href=" /vacancylist"> All Job vacancies</a></li>
+                      <li className='nav-list'><a href="/addvacancy">Add Job Vacancy</a></li>
                   </ul>)}
             </div>
           </div> :
