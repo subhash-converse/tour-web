@@ -47,40 +47,6 @@ const Vacancylist = () => {
         <div className=''>
         <button className='Export-button' onClick={handleClickOpen}><Link to="/addvacancy"><span className='pr-[10px]'><FontAwesomeIcon icon={faPlus} /></span> Add A Job</Link></button>
         </div>
-        {/* <div className='mt-7 md:mt-0'>
-        <div>
-        <button className='dialog-button' onClick={handleClickOpen}><FontAwesomeIcon icon={faPlus}/>Candidate list</button>
-      
-      <Dialog 
-        open={open}
-        TransitionComponent={Transition}
-        keepMounted
-        onClose={handleClose}
-        aria-describedby="alert-dialog-slide-description"
-        className='rounded-2xl'
-      >
-        <DialogTitle>{"Create A Candidate"}</DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-slide-description">
-            <div className='w-full min-w-[150px] md:px-8'>
-            <input type="text" placeholder='id' className='dialoge-input' />
-            <input type="text" placeholder='Name' className='dialoge-input' />
-            <input type="text" placeholder='Email' className='dialoge-input'/>
-            <input type="number" placeholder='Phone' className='dialoge-input'/>
-            <input type="date" placeholder='DOB' className='dialoge-input flex'/>
-            <input type="text" placeholder='Gender' className='dialoge-input'/>
-            <input type="text" placeholder='Department' className='dialoge-input'/>
-            <input type="file" placeholder='photo' className='dialoge-input text-sm'/>
-            </div>
-           
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-        <Button className='dialog-button' onClick={handleClickOpen}>
-      Submit</Button>        </DialogActions>
-      </Dialog>
-    </div>
-        </div> */}
       </div>
 
       {/* input fields */}
